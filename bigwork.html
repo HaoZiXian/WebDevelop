@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>M-A-C魅可商城</title>
+	<meta charset="utf-8">
+	<script src="animate.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+			color: white;
+		}
+		li{
+			list-style: none;
+		}		
+ 		#top{
+			width: 100%;
+			height: 30px;
+			margin: 0 auto;
+			background-color: black;		
+		}
+		.hello{
+			float: left;
+			display: inline-block;
+			color: white;			
+			margin-left: 600px;
+			margin-top: 5px;
+		}
+		.mine{
+			width: 85px;
+			margin-left: 35px;
+			background-image: url(images/sanjiao.png);
+			background-repeat: no-repeat;
+			background-position: 73px;
+			float: left;
+			margin-top: 5px;
+			display: inline-block;
+		}
+		.record{
+			float: left;
+			display: inline-block;
+			margin-left: 35px;
+			margin-top: 5px;
+		}
+		.register{
+			float: left;
+			display: inline-block;
+			margin-left: 35px;
+			margin-top: 5px;
+		}
+		.help{
+			float: left;
+			display: inline-block;
+			margin-left: 35px;
+			margin-top: 5px;
+		}
+		#bottom{
+			width: 100%;
+			height: 80px;
+			background-color:black;
+		}
+		.logo{
+			padding-left: 100px;
+			float: left;
+		}
+		.search{
+			width: 400px;
+			height: 39px;
+			margin-top: 15px;
+			margin-left: 150px;
+			text-align: center;
+		}
+		.searchimg{
+			background: url(images/search.png) center;
+			background-repeat: no-repeat;
+			background-color: #fff;
+			width: 55px; 
+			height: 43px; 
+			margin-left: -5px;
+			margin-bottom: -17px;
+			border:none;
+		}
+		.cart{
+			margin-left: 1000px;
+			margin-top: -30px;
+			margin-bottom: 20px;
+		}
+		.box{
+			width: 1200px;
+			height: 220px;
+			border: 0px solid;
+			margin: 10px 160px 100px auto;
+			position: relative;
+			overflow: hidden;
+		}
+		.slider{
+			width: 8400px;
+			position: absolute;
+			left: -1200px;
+		}
+		.slide{
+			width: 1200px;
+			height: 300px;
+			overflow: hidden;
+			float: left;
+		}
+		.box>span{
+			display: block;
+			width: 30px;
+			height: 45px;
+			text-align: center;
+			cursor: pointer;
+ 			background-color: black;
+			top: 85px;
+			line-height: 50px;
+			background-color:#CF2C27 ; 
+			font-size: 30px;
+			position: absolute;
+			opacity: 0;
+ 		}
+ 		#left{
+ 			left: 30px;
+ 		}
+ 		#right{
+ 			right: 30px;
+ 		}
+ 		.nav{
+ 			position: absolute;
+ 			left: 500px;
+ 			bottom: 10px;
+ 		}
+ 		.nav>li{
+ 			float: left;
+ 			width: 20px;
+ 			height: 20px;
+ 			text-align: center;
+ 			background: #ccc;
+ 			cursor: pointer;
+ 			margin: 0 10px;
+ 			border-radius: 50px;
+ 		}
+ 		.nav .active{
+ 			background: red;
+ 			color: white;
+ 		}
+ 		.s1{
+ 			margin-left: 50px;
+ 			margin-top: -55px;
+ 		}
+ 		.s2{
+ 			margin-left: 75px;
+ 			margin-top: 20px;
+ 			float: left;
+ 		}
+ 		#churse{
+ 			color: black;
+ 			text-decoration-line: underline;
+ 			font-size: 25px;
+ 			margin-left: 800px;
+  		}
+  		.first{
+  			float: left; 
+			margin:35px 0 18px 22px;
+			text-align: center;
+  		}
+  		.one{
+  			width: 500px;
+  			margin-right: 900px;
+  		}
+  		.two{
+  			width: 500px;
+  			margin-left: 600px;
+  			margin-top: -420px;
+  		}
+  		.sentence{
+  			width: 500px;
+			height: 45px;
+			background: rgba(76,76,76,0.7);
+			margin-top: -48px;
+			color: black;
+			text-align: center;
+			position: absolute; 
+  		}
+  		#churse01{
+  			color: white;
+  			text-decoration-line: underline;
+  		}
+  		.sentence01{
+  			width: 500px;
+			height: 45px;
+			background: rgba(76,76,76,0.7);
+			margin-top: -48px;
+			margin-left: 0px;
+			color: black;
+			text-align: center;
+			position: absolute; 
+  		}
+  		.buy{
+  			margin-left: 45px;
+  		}
+  		.three{
+  			float: left;
+  			border: 1px solid;
+  			margin-left:10px;
+  		}
+  		.four{
+  			float: left;
+  			border: 1px solid;
+  			margin-left: 10px;
+  		}
+  		.five{
+  			float: left;
+  			margin-left: 10px;
+  			border: 1px solid;
+  		}
+  		.six{
+  			float: left;
+  			margin-left: 10px;
+  			border: 1px solid;
+  		}
+  		#kouhong01{
+  			color: black;
+  			font-size: 20px;
+  			margin-left: 100px;
+  			text-align: center;
+  		}
+  		#kouhong02{
+  			color: black;
+  			font-size: 20px;
+  			margin-left: 100px;
+  			text-align: center;
+  		}
+  		#kouhong03{
+  			color: black;
+  			font-size: 20px;
+  			margin-left: 100px;
+  			text-align: center;
+  		}
+  		#kouhong04{
+  			color: black;
+  			font-size: 20px;
+  			margin-left: 100px;
+  			text-align: center;
+  		}
+  		.img01{
+			width: 300px;
+			height: 400px;
+  		}
+  		.img02{
+			width: 300px;
+			height: 400px;
+  		}
+  		.img03{
+			width: 300px;
+			height: 400px;
+  		}
+  		.img04{
+			width: 300px;
+			height: 400px;
+  		}
+  		.footer {
+    		height: 345px;
+			background-color: #0B0A0F;
+		}
+		.footer-top {
+  			height: 185px;
+  			margin-top: 500px;
+            border-bottom: 1px solid #ffffff;
+		}
+		.footer-box {
+    		width: 1000px;
+    		/* height: 100%; */
+    		float: left;
+    		border-bottom: 1px solid #ffffff;
+		}
+		.help-content {
+    		float: left;
+    		height: 100%;
+    		/* margin-left:50px; */
+		}
+		.help-content ul {
+   			float: left;
+    		padding-top: 20px;
+    		margin-left: 53px;
+		}
+		.help-content ul li {
+    		font-size: 12px;
+   			color: #ffffff;
+    		padding-top: 12px;
+		}
+		.help-content .native {
+		    font-size: 15px;
+		    color: black;
+		}
+		.footer-box{
+			border: 0px;
+		}
+		.footer-bottom{
+		    height: 160px;
+		}
+		.footer-bottom ul{
+		    width: 60%;
+		    margin: 0 auto;
+		    padding-top: 15px;
+		    height: 15px;
+		}
+		.footer-bottom ul li{
+		    float: left;
+		    color: #ACA9D3;
+		    font-size: 12px;
+		    padding: 0 15px;
+		    border-right: 1px solid #ACA9D3;
+		}
+		.footer-bottom ul .native{
+		    border:none;
+		    color: white;
+		}
+		#native{
+			color: white;
+			font-size: 15px;
+		}
+		.footer-bottom p{
+		    text-align: center;
+		    padding-top: 10px;
+		    color: #ACA9D3;
+		    font-size: 12px;
+		}
+		.container_wrap {
+    		width: 100%;
+    		height: 895px;
+    		background: #0B0A0F;
+		}
+		.container_box {
+		    margin: 0 auto;
+		    width: 1180px;
+		    height: 100%;
+		}
+		/*中间内容*/
+		.section {
+		    height: 350px;
+		    /* width: 2000px; */
+		}
+		.side{
+			height: 115px;
+			width: 75px;
+			text-align: center;   
+			background-color: #FF3030;
+			margin-left:1190px;
+			/* position: fixed;  */
+			margin-top: -115px;		
+		}
+		.side img{
+			margin: 40px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="top">
+		<li class="hello"><span>嘿，欢迎来到美美网M-A-C专区！</span></li> 
+		<li class="mine"><a href="#">我的魅可</a></li>	
+		<li class="record"><a href="land.html">请登录</a></li>
+		<li class="register"><a href="regest.html">免费注册</a></li>
+		<li class="help"><a href="#">帮助中心</a></li>
+	</div>
+	<div id="bottom">
+		<img class="logo" src="images/魅可图标.png">
+		<input class="search" type="text" name="search" placeholder="请输入搜索内容">
+		<input class="searchimg" type="submit" value="" name="img">
+		<img class="cart" src="images/cart.png">
+	</div>
+	<div id="box" class="box">
+		<div id="slider" class="slider">
+			<div class="slide"><img src="images/雾面长图.png"></div>
+			<div class="slide"><img src="images/美美网修改版.png"></div>					
+			<div class="slide"><img src="images/圣诞款04.png"></div>
+			<div class="slide"><img src="images/圣诞款01修改版.png"></div>
+			<div class="slide"><img src="images/宫廷长图修改版.png"></div>
+			<div class="slide"><img src="images/雾面长图.png"></div>
+			<div class="slide"><img src="images/美美网修改版.png"></div>
+		</div>
+		<span id="left"> < </span>
+		<span id="right"> > </span>
+		<ul class="nav" id="nav">
+			<li class="active" >1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<div>
+		<h5 class="s1">圣诞限定 个性玩妆</h5>
+		<h1 class="s2">星夜集结 光芒瞩目</h1>
+		<a id="churse" href="https://www.maccosmetics.com.cn/holiday-colour">立即购买</a>
+	</div>
+	<div class="kouhong">
+		<div class="first">
+			<div class="one">
+				<img style="width:500px" src="images/圣诞限定迷你三支唇膏.png">
+				<div class="sentence">
+					<span>圣诞限定迷你三支装唇膏套组</span><br>
+					<a id="churse01" href="https://www.maccosmetics.com.cn/holiday-sui">立即购买</a>
+				</div>
+			</div>
+			<div class="two">
+				<img style="width:500px" src="images/宫廷新款.png">
+				<div class="sentence01">
+					<span>新年宫廷限定系列</span><br>
+					<a id="churse01" href="https://www.maccosmetics.com.cn/collections-cny">立即购买</a>
+				</div>
+			</div>
+		</div>
+		<div><h2 class="buy">人 气 必 B U Y</h2></div>
+		<div class="second">
+			<div class="three">
+				<img class="img01" src="images/柔雾小辣椒.png">
+				<div class="sentence02">
+					<a id="kouhong01" href="https://www.maccosmetics.com.cn/product/13854/60284/powder-kiss-lipstick#!/shade/316_Devoted_To_Chili_%E6%9F%94%E9%9B%BE%E5%B0%8F%E8%BE%A3%E6%A4%92">柔雾小辣椒</a>
+				</div>
+			</div>
+			<div class="four">
+				<img class="img02" src="images/白桃奶茶色.png">
+				<div>
+					<a id="kouhong02" href="https://www.maccosmetics.com.cn/product/13854/60284/powder-kiss-lipstick#!/shade/314_Mull_It_Over_%E7%99%BD%E6%A1%83%E5%A5%B6%E8%8C%B6%E8%89%B2">白桃奶茶色</a>
+				</div>
+			</div>
+			<div class="five">
+				<img class="img03" src="images/糖渍樱花.png">
+				<div>
+					<a id="kouhong03" href="https://www.maccosmetics.com.cn/product/13854/60284/powder-kiss-lipstick#!/shade/923_Stay_Curious%E7%B3%96%E6%B8%8D%E6%A8%B1%E8%8A%B1">糖渍樱花</a>
+				</div>
+			</div>
+			<div class="six">
+				<img class="img04" src="images/糖霜草莓色.png">
+				<div>
+					<a id="kouhong04" href="https://www.maccosmetics.com.cn/product/13854/60284/powder-kiss-lipstick#/shade/315_Lasting_Passion_%E7%B3%96%E9%9C%9C%E8%8D%89%E8%8E%93%E8%89%B2">糖霜草莓色</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+        <div class="footer-top">
+            <div style="float: left;margin-left:60px">
+            	<img style="height:150px;width:140px;margin-top: 25px" src="images/loginB.png" />
+            </div>
+            <div class="footer-box">
+                <div class="help-content">
+                	<ul>
+                 		<li id="native">购物指南</li>
+                		<li>如何下单</li>
+                		<li>美美购流程</li>
+                		<li>订单查询</li>
+                		<li>物流配送</li>
+                	</ul>
+                	<ul>
+                		<li id="native">支付相关</li>
+                		<li>支付方式</li>
+                		<li>安全设置</li>
+                		<li>账户信息</li>
+                	</ul>
+                	<ul>
+                		<li id="native">售后服务</li>
+                		<li>取消订单</li>
+                		<li>申请售后</li>
+                		<li>退货流程</li>
+                		<li>退款相关</li>
+                	</ul>
+                	<ul>
+                		<li id="native">VIP服务</li>
+                		<li>VIP优惠</li>
+                		<li>如何成为VIP</li>
+                 		<li>超级美钻</li>
+                	</ul>
+                	<ul>
+                		<li id="native">美美荐</li>
+                		<li>美美正品</li>
+                		<li>闪电发货</li>
+                		<li>美美荐售后</li>
+               		</ul>
+                	<ul>
+                		<li id="native">更多</li>
+                		<li>手机APP</li>
+                		<li>美美淘APP</li>
+                		<li>美美网插件</li>
+                		<li>其他</li>
+                	</ul>
+              	</div>
+                <div style="float: left;margin-top: 30px;margin-left: 48px;">
+                	<img src="images/erweima.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <ul>
+                <li>关于美美网</li>
+                <li>联系我们</li>
+                <li>合作商家</li>
+                <li>友情链接</li>
+                <li>加入我们</li>
+                <li>移动应用</li>
+                <li>热门</li>
+                <li>广告联盟</li>
+                <li>使用条款</li>
+            </ul>
+            <p>
+              Copyright @ 2011-2015 B5M.COM.All rights reserved. Powered by
+              B5Msoft Co.,Ltd.
+            </p>
+            <p>
+              增值电信业务经营许可证：沪B2-20130065号|中华人民共和国互联网药品信息服务资格证书（沪）-非经营性-2013-0034
+              沪卫（中医）网审【2015】10032号
+              沪ICP备11034776号-3|化妆品流通许可证:
+            </p>
+            <p>SP3101151410301755</p>            
+          </div>
+        </div>
+        <div>
+        	<div class="side" style=" border-bottom: 2px solid #b9caac"><a href="#"><img src="images/gotop.png"></a></div>
+        </div>
+</body>
+<script type="text/javascript">
+	var box=document.getElementById("box");
+ 	var slider=document.getElementById("slider");
+	var slide=document.getElementById("slide");
+	var left=document.getElementById("left");
+	var right=document.getElementById("right");
+	var oNavList=document.getElementById("nav").children;
+	var isMoving=false;
+	var index=1;
+	var timer;
+	//轮播下一张的函数（右箭头）
+	function next(){
+		if(isMoving){
+			return;
+		}		
+		isMoving=true;
+		index++;
+		navChange();
+		animate(slider,{left:-1200*index},function(){
+			if(index==6){
+		    	slider.style.left="-1200px";
+				index=1;
+			}
+			isMoving=false;
+		});				
+	}
+	//左箭头
+	function prev(){
+		if(isMoving){
+			return;
+		}
+		isMoving=true;
+		index--;
+		navChange();
+		animate(slider,{left:-1200*index},function(){
+			if(index===0){
+				slider.style.left="-6000px";//-1200*5+"px"
+				index=5;
+			}
+			isMoving=false;
+		});
+	}
+	timer=setInterval(next,2000);
+	//鼠标划入清定时器
+	box.onmouseover=function(){
+		animate(left,{opacity:50});
+		animate(right,{opacity:50});
+		clearInterval(timer);
+	}
+	//鼠标划出开定时器
+	box.onmouseout=function(){
+		animate(left,{opacity:0});
+		animate(right,{opacity:0});
+		timer=setInterval(next,2000);
+	}
+	right.onclick=next;
+	left.onclickc=prev;
+	//小按钮点击事件
+	for(var i=0;i<oNavList.length;i++){
+		oNavList[i].idx=i;
+		oNavList[i].onclick=function(){
+			index=this.idx+1;
+			navChange();
+			animate(slider,{left:-1200*index})
+		}
+	}
+	//小按钮背景色
+	function navChange(){
+		for(var i=0;i<oNavList.length;i++){
+			oNavList[i].className="";
+		}
+		if(index>5){
+			oNavList[0].className="active";
+		}else if(index===0){
+			oNavList[4].className="active";//图片的个数-1
+		}else{
+			oNavList[index-1].className="active";
+		}	
+	}
+</script>
+</html>
